@@ -1,32 +1,34 @@
 ---
-import ExperienceContend from "./ExperienceContend.astro"
+import ExperienceContend from "./ExperienceContend.astro";
 
 const EXPERIENCE = [
-    {
-        date: "Actualmente",
-        title:"Software Engineer - Freelance",
-        description:"All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
-    },
-     {
-        date: "Diciembre 2023 - Febrero 2024",
-        title:"Fullstack Developer y Founder - Turing Factory",
-        description:"All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
-    },
-    {
-        date: "Septiembre 2023 - Diciembre 2023",
-        title:"Fullstack Developer - PrismaDev",
-        description:"All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
-    },
-]
-
+  {
+    date: "Diciembre 2022 - Actualmente",
+    title: "Software Engineer - Freelance",
+    description:
+      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+  },
+  {
+    date: "Diciembre 2023 - Febrero 2024",
+    title: "Fullstack Developer y Founder - Turing Factory",
+    description:
+      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+  },
+  {
+    date: "Septiembre 2023 - Diciembre 2023",
+    title: "Fullstack Developer - PrismaDev",
+    description:
+      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+  },
+];
 ---
 
 <ol class="relative border-s border-gray-200 ml-3">
-
-    {EXPERIENCE.map(experience=> (
-         <li class="mb-10 ms-4">
-            <ExperienceContend {...experience} />    
-        </li>
-    ))}
-  
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceContend {...experience} />
+      </li>
+    ))
+  }
 </ol>

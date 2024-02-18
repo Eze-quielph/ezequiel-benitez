@@ -1,0 +1,70 @@
+---
+import HTML from "./icon/HTML.astro";
+import CSS from "./icon/CSS.astro";
+
+const TAGS = {
+  HTML: {
+    name: "Html",
+    class: "bg-black text-white",
+    icon: HTML,
+  },
+  CSS: {
+    name: "Css",
+    class: "bg-black text-white",
+    icon: CSS,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Evento X",
+    description: "loreafdsfafadfsafdsffffddfdsadf",
+    link: "",
+    github: "",
+    image: "/projects/eventox.webp",
+    tags: [TAGS.HTML, TAGS.CSS],
+    plataform: ["Mobile", "Web"],
+  },
+  {
+    title: "Spootchat",
+    description: "loreafdsfafadfsafdsffffddfdsadf",
+    link: "",
+    github: "",
+    image: "/projects/spootcht.webp",
+    tags: [TAGS.HTML, TAGS.CSS],
+    plataform: ["Mobile", "Web"],
+  },
+  {
+    title: "Tool AI",
+    description: "loreafdsfafadfsafdsffffddfdsadf",
+    link: "",
+    github: "",
+    image: "/projects/toolai.webp",
+    tags: [TAGS.HTML, TAGS.CSS],
+    plataform: ["Mobile", "Web"],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, image, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-2 text-pretty">{description}</p>
+      <ul class="flex gap-x-42 flex-row">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+              <tag.icon class="size-5" /> {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10 "
+        src={image}
+        alt={title}
+      />
+    </article>
+  ))
+}
