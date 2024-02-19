@@ -1,8 +1,37 @@
-<header class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto">
-    <nav class=" flex flex-row gap-x-10 opacity-80">
-        <a href="/">Home</a>
-        <a href="/about">Abot</a>
-        <a href="/project">Project</a>
-        <a href="/contact">Contact</a>
-    </nav>
+---
+import { useTranslations, getLangFromUrl } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
+---
+
+<header
+  class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto"
+>
+  <nav class="flex flex-row gap-x-10 opacity-80">
+    <a
+      href="#home"
+      class="transition duration-300 ease-in-out transform hover:scale-110"
+      >{t('header.home')}</a
+    >
+    <a
+      href="#experience"
+      class="transition duration-300 ease-in-out transform hover:scale-110"
+      >{t('header.experience')}</a
+    >
+    <a
+      href="#project"
+      class="transition duration-300 ease-in-out transform hover:scale-110"
+      >{t('header.project')}</a
+    >
+    <a
+      href="#about"
+      class="transition duration-300 ease-in-out transform hover:scale-110"
+      >{t('header.about')}</a
+    >
+       <a
+      href="#contact"
+      class="transition duration-300 ease-in-out transform hover:scale-110"
+      >{t('header.contact')}</a
+    >
+  </nav>
 </header>
