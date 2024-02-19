@@ -76,7 +76,7 @@ const t = useTranslations(lang)
         </SocialIcon>
         <SocialIcon href="https://www.github/Eze-quielph">
           <MailIcon class="size-4 lg:size-6" />
-          Ezequiel_developer@outlook.com
+          ezequiel_developer@outlook.com
         </SocialIcon>
       </nav>
     </Container>
@@ -84,14 +84,15 @@ const t = useTranslations(lang)
     <Container id="experience">
       <h2 class="text-3xl font-semibold pb-6 flex gap-x-3 items-center">
         <WorkIcon class="size-7" />
-        Experiencia Laboral
+        {t('experience.title.main')}
       </h2>
+      
       <Experience />
     </Container>
     <Container id="project">
       <h2 class="text-3xl font-semibold pb-6 flex gap-x-3 items-center">
         <CodeIcon class="size-7" />
-        Proyectos
+        {t("project.title.main")}
       </h2>
       <Projects />
     </Container>
@@ -112,20 +113,20 @@ const t = useTranslations(lang)
     function type() {
       const currentString = strings[currentStringIndex];
       if (isDeleting) {
-        typedText.textContent = currentString.substring(
+       typedText ? typedText.textContent = currentString.substring(
           0,
           currentCharIndex - 1
-        );
+        ) : null
         currentCharIndex--;
         if (currentCharIndex === 0) {
           isDeleting = false;
           currentStringIndex = (currentStringIndex + 1) % strings.length;
         }
       } else {
-        typedText.textContent = currentString.substring(
+       typedText ? typedText.textContent = currentString.substring(
           0,
           currentCharIndex + 1
-        );
+        ) : null
         currentCharIndex++;
         if (currentCharIndex === currentString.length) {
           isDeleting = true;

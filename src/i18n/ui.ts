@@ -3,7 +3,7 @@ export const languages = {
   es: "Spanish",
 };
 
-export const defaultLang = "en";
+export const defaultLang = "es";
 
 export const ui = {
   en: {
@@ -31,14 +31,32 @@ export const ui = {
     "home.input-1": "Software Engineer ",
     "home.input-2": "Mobile Developer ",
     "home.input-3": "Web Developer ",
+
+    // Experience
+    "experience.title.main": "job Experience",
+    "experience.date-1": "Diciembre 2022 - Actualmente",
+    "experience.date-2": "Diciembre 2023 - Febrero 2024",
+    "experience.date-3": "Septiembre 2023 - Diciembre 2023",
+    "experience.title-1": "Software Engineer - Freelance",
+    "experience.title-2": "Fullstack Developer y Founder - Turing Factory",
+    "experience.title-3": "Fullstack Developer - PrismaDev",
+    "experience.description-1":
+      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+    "experience.description-2":
+      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+    "experience.description-3":
+      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+
+    // Projects
+    "project.title.main": "Projects",
   },
   es: {
     // Layout
     "layout.title": "Ezequiel Benitez | Freelance, Ingeniero de Software",
     "layout.description":
       "Ezequiel Benitez | Freelance, Ingeniero de Software, más de 3 años de experiencia como desarrollador Backend",
-   
-      // Header
+
+    // Header
     "header.home": "Inicio",
     "header.experience": "Experiencia",
     "header.project": "Proyectos",
@@ -57,5 +75,23 @@ export const ui = {
     "home.input-1": "Software Engineer  ",
     "home.input-2": "Mobile Developer  ",
     "home.input-3": "Web Developer  ",
+
+    // Experience
+    "experience.title.main": "job Laboral",
+    "experience.date-1": "Diciembre 2022 - Actualmente",
+    "experience.date-2": "Diciembre 2023 - Febrero 2024",
+    "experience.date-3": "Septiembre 2023 - Diciembre 2023",
+    "experience.title-1": "Software Engineer - Freelance",
+    "experience.title-2": "Fullstack Developer y Founder - Turing Factory",
+    "experience.title-3": "Fullstack Developer - PrismaDev",
+    "experience.description-1":
+      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+    "experience.description-2":
+      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+    "experience.description-3":
+      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+
+    // Projects
+    "project.title.main": "Proyectos",
   },
 } as const;

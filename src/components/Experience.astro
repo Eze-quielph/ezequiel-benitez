@@ -1,24 +1,26 @@
 ---
 import ExperienceContend from "./ExperienceContend.astro";
 
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const EXPERIENCE = [
   {
-    date: "Diciembre 2022 - Actualmente",
-    title: "Software Engineer - Freelance",
-    description:
-      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+    date: t("experience.date-1"),
+    title: t("experience.title-1"),
+    description: t("experience.description-1"),
   },
   {
-    date: "Diciembre 2023 - Febrero 2024",
-    title: "Fullstack Developer y Founder - Turing Factory",
-    description:
-      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+    date: t("experience.date-2"),
+    title: t("experience.title-2"),
+    description: t("experience.description-2"),
   },
   {
-    date: "Septiembre 2023 - Diciembre 2023",
-    title: "Fullstack Developer - PrismaDev",
-    description:
-      "All of the pages and components are first designed in Figma and we keep aparity between the two versions even as we update the project.",
+    date: t("experience.date-3"),
+    title: t("experience.title-3"),
+    description: t("experience.description-3"),
   },
 ];
 ---
