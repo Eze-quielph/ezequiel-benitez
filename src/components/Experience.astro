@@ -23,12 +23,18 @@ const EXPERIENCE = [
     description: t("experience.description-3"),
   },
 ];
+
+import WorkIcon from "./icon/Work.astro";
 ---
 
-<ol class="relative border-s border-gray-200 ml-3">
+<h2 class="text-3xl font-semibold pb-6 flex gap-x-3 items-center">
+  <WorkIcon class="size-7" />
+  {t("experience.title.main")}
+</h2>
+<ol class="relative mt-8">
   {
     EXPERIENCE.map((experience) => (
-      <li class="mb-10 ms-4">
+      <li class="mb-2 ms-4">
         <ExperienceContend {...experience} />
       </li>
     ))

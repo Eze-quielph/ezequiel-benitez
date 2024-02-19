@@ -1,16 +1,16 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Card from "../../components/Card.astro";
+
 import Container from "../../components/Container.astro";
-import Badge from "../../components/Badge.astro";
+
 import Experience from "../../components/Experience.astro";
 import LinkedinIcon from "../../components/icon/Linkedin.astro";
 import GithubIcon from "../../components/icon/Github.astro";
 import MailIcon from "../../components/icon/Mail.astro";
 import SocialIcon from "../../components/SocialIcon.astro";
-import WorkIcon from "../../components/icon/Work.astro";
-import CodeIcon from "../../components/icon/Code.astro";
+
 import Projects from "../../components/Projects.astro";
+import AboutMe from "../../components/AboutMe.astro";
 
 import { useTranslations, getLangFromUrl } from "../../i18n/utils";
 
@@ -24,6 +24,7 @@ const t = useTranslations(lang);
       <div class="flex content-center justify-center flex-wrap">
         <div class="flex flex-col lg:flex-row items-center">
           <img
+            loading="lazy"
             class="rounded-full size-40 mb-5 lg:mb-0 lg:mr-8"
             src="https://res.cloudinary.com/dlhpctfa3/image/upload/v1707675395/hero-image_hti6yg.jpg"
             alt="ezequiel foto"
@@ -35,18 +36,8 @@ const t = useTranslations(lang);
             >
               {t("home.title")}
             </h1>
-            <a
-              href="https://www.linkedin.com/in/ezequiel-benitez2203"
-              target="_blank"
-              rel="noopener"
-              class="flex justify-center items-center ml-3"
-            >
-              <Badge>{t("home.badge")}</Badge>
-            </a>
           </div>
         </div>
-
-        <span class="input"></span>
       </div>
       <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
         <span class="text-yellow-200/90">{t("home.description.span-1")}</span>
@@ -61,6 +52,8 @@ const t = useTranslations(lang);
             id="typedText"
           >
           </span>
+
+          <span class="input"></span>
         </h2>
       </div>
       <nav class="flex gap-4 mt-8 flex-wrap">
@@ -74,24 +67,19 @@ const t = useTranslations(lang);
         </SocialIcon>
         <SocialIcon href="https://www.github/Eze-quielph">
           <MailIcon class="size-4 lg:size-6" />
-          Ezequiel_developer@outlook.com
+          ezequiel_developer@outlook.com
         </SocialIcon>
       </nav>
     </Container>
 
-    <Container>
-      <h2 class="text-3xl font-semibold pb-6 flex gap-x-3 items-center">
-        <WorkIcon class="size-7" />
-        Experiencia Laboral
-      </h2>
+    <Container id="experience">
       <Experience />
     </Container>
-    <Container>
-      <h2 class="text-3xl font-semibold pb-6 flex gap-x-3 items-center">
-        <CodeIcon class="size-7" />
-        Proyectos
-      </h2>
+    <Container id="project">
       <Projects />
+    </Container>
+    <Container id="about">
+      <AboutMe />
     </Container>
   </main>
 </Layout>
@@ -110,20 +98,24 @@ const t = useTranslations(lang);
     function type() {
       const currentString = strings[currentStringIndex];
       if (isDeleting) {
-        typedText.textContent = currentString.substring(
-          0,
-          currentCharIndex - 1
-        );
+        typedText
+          ? (typedText.textContent = currentString.substring(
+              0,
+              currentCharIndex - 1
+            ))
+          : null;
         currentCharIndex--;
         if (currentCharIndex === 0) {
           isDeleting = false;
           currentStringIndex = (currentStringIndex + 1) % strings.length;
         }
       } else {
-        typedText.textContent = currentString.substring(
-          0,
-          currentCharIndex + 1
-        );
+        typedText
+          ? (typedText.textContent = currentString.substring(
+              0,
+              currentCharIndex + 1
+            ))
+          : null;
         currentCharIndex++;
         if (currentCharIndex === currentString.length) {
           isDeleting = true;
