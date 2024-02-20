@@ -1,14 +1,18 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
+import AstroIcon from "./icon/About.astro";
 const personalImageAlt = "Ezequiel Benitez";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
+<h2 id="about" class="text-3xl font-semibold pb-6 flex gap-x-3 items-center">
+  <AstroIcon class="size-6" />
+  {t("about.title")}
+</h2>
 <article
-  id="about"
   class="flex flex-col items-center justify-center gap-8 text-white dark:text-gray-300 md:flex-row"
 >
   <div

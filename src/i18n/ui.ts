@@ -59,9 +59,9 @@ export const ui = {
     // About Me
     "about.title": "About Me",
     "about.des.1":
-      "My name is Ezequiel Benitez but they usually call me Eze. I started in the programming prior to the 2020 quarantine. I am currently",
+      "My name is Ezequiel Benitez but they usually call me Eze. I started in programming before the 2020 quarantine. I am currently",
     "about.des.2":
-      " designing and launching applications as a freelance developer.",
+      "designing and launching applications as a freelance developer.",
     "about.des.3": "My professional career has taken me to ",
     "about.des.4": "specialize in Backend and Mobile development",
     "about.des.5": ", where I have honed my skills in technologies such as",
@@ -71,24 +71,26 @@ export const ui = {
     "about.des.8":
       "React Native and creating dynamic web interfaces using React.js",
     "about.des.9":
-      ". My passion for technology and my ability to quickly adapt to new technologies allows me to address complex challenges with confidence and effectiveness.",
+      ". My passion for technology and my ability to quickly adapt to new technologies allow me to address complex challenges with confidence and effectiveness.",
     "about.des.10": "In addition to my technical experience, ",
     "about.des.11":
       "I am a skilled communicator and an effective collaborator in multidisciplinary teams.",
     "about.des.12":
       "I enjoy working in dynamic environments where I can contribute my problem-solving skills and creativity to find innovative solutions.",
+    "about.des.13":
+      "I thrive on challenges and continuously seek opportunities to expand my knowledge and expertise in software development.",
   },
   es: {
     // Layout
     "layout.title": "Ezequiel Benitez | Freelance, Ingeniero de Software",
     "layout.description":
-      "Ezequiel Benitez | Freelance, Ingeniero de Software, más de 3 años de experiencia como desarrollador Backend",
+      "Ezequiel Benitez | Freelance, Ingeniero de Software con más de 3 años de experiencia como desarrollador Backend",
 
     // Header
     "header.home": "Inicio",
     "header.experience": "Experiencia",
     "header.project": "Proyectos",
-    "header.about": "Sobre Mi",
+    "header.about": "Sobre Mí",
     "header.contact": "Contacto",
 
     // Home
@@ -97,13 +99,13 @@ export const ui = {
     "home.description.span-1":
       "Más de 20 clientes satisfechos y 2 años de experiencia.",
     "home.description.span-2":
-      "Puedes visitar mi blog donde hablo de programación y temas técnicos.",
+      "Visita mi blog donde comparto sobre programación y temas técnicos.",
     "home.description.span-3": "Soy de Buenos Aires, Argentina.",
     "home.description.span-4": "Especializado en Desarrollo Backend.",
 
     // Experience
     "experience.title.main": "Experiencia Laboral",
-    "experience.date-1": "Diciembre 2022 - Actualmente",
+    "experience.date-1": "Diciembre 2022 - Actualidad",
     "experience.date-2": "Diciembre 2023 - Febrero 2024",
     "experience.date-3": "Septiembre 2023 - Diciembre 2023",
     "experience.title-1": "Ingeniero de Software - Freelance",
@@ -111,43 +113,42 @@ export const ui = {
       "Desarrollador Fullstack y Co-Fundador - Turing Factory",
     "experience.title-3": "Desarrollador Fullstack - PrismaDev",
     "experience.description-1":
-      "Estas son algunas de las aplicaciones que realicé para distintas empresas durante mi tiempo de freelance: Desarrollo de aplicación que gestione ventas. Desarrollo de sistema de control de inventario. Migración de microservicio de python a Java. Aplicación Móvil para recepción de pedidos de heladería con react y react native. Liderar proyecto backend de un servicio SaaS en donde se logró optimizar un 10% los costos de mantenimiento. Desarrollar aplicaciones móviles entre ellas una para gestionar información interna de una institución y otra que es para una radio local. Esto me ha dado una experiencia considerable en Base de datos, Java, Python, el entorno general de react, react native y arquitectura ",
+      "Durante mi tiempo como freelancer, he creado diversas aplicaciones para distintas empresas, incluyendo sistemas de gestión de ventas e inventario, migración de microservicios de Python a Java, y aplicaciones móviles con React y React Native. También lideré proyectos backend para servicios SaaS, optimizando costos de mantenimiento en un 10%.",
     "experience.description-2":
-      "En el proceso de crecimiento de mi pequeña agencia he tenido que: Liderar proyecto backend de un servicio SaaS en donde se logró optimizar un 10% los costos de mantenimiento. Desarrollar aplicaciones móviles entre ellas una para gestionar información interna de una institución y otra que es para una radio local. Estas experiencias me han dado conocimientos sólidos de Java, React Native, Kotlin y Arquitectura de aplicaciones.",
+      "En mi agencia, lideré proyectos backend para servicios SaaS y desarrollé aplicaciones móviles. Estas experiencias me han brindado un sólido conocimiento en Java, React Native, Kotlin y arquitectura de aplicaciones.",
     "experience.description-3":
-      "Durante mi proceso en esta empresa colabore en proyectos como: Migrar sistema monolito hecho en Express a microservicios con TDD en  NestJs. Desarrollo de microservicios con Clean Architecture para gestionar inventario de negocio. Trabajo con entorno React, frameworks como Next y vite, y React Native para dispositivos móviles en el desarrollo de aplicaciones de gestión de clientes.  Lo cual me ha dado sólida experiencia en aplicaciones del entorno de react y el trabajo en entornos de NodeJs.",
+      "En PrismaDev, colaboré en proyectos como la migración de sistemas monolíticos a microservicios con TDD en NestJs, y el desarrollo de microservicios con Clean Architecture. Tengo una sólida experiencia en React, Next.js, Vite y React Native.",
 
     // Projects
     "project.title.main": "Proyectos",
     "project.des.1":
-      "Desarrollo de un marketplace para la venta de tickets de eventos con Dashboards y sistemas de notificaciones. Estuve encargado de seleccionar las tecnologías y el encargado del desarrollo del backend para dar soporte a un sistema de compras, de inventario y sistema de autenticación.",
+      "Desarrollo de un marketplace para la venta de tickets de eventos con Dashboards y sistemas de notificaciones. Fui responsable de seleccionar tecnologías y desarrollar el backend para sistemas de compras, inventario y autenticación.",
     "project.des.2":
-      "Este proyecto colaborativo estilo spotify destacó por su enfoque en la eficiencia y el rendimiento. Implementamos tecnologías como Redis para un sólido sistema de caché, optimizamos las consultas en bases de datos relacionales, integramos pasarelas de pago, ofrecimos autenticación con Google, proporcionamos un chat en vivo y empleamos bases de datos NoSQL.",
+      "Este proyecto colaborativo estilo Spotify destacó por su enfoque en la eficiencia y rendimiento. Implementamos tecnologías como Redis para un sólido sistema de caché, optimizamos consultas en bases de datos relacionales, integramos pasarelas de pago, ofrecimos autenticación con Google, proporcionamos chat en vivo y empleamos bases de datos NoSQL.",
     "project.des.3":
-      "Aplicacion de herramientas para el dia a dia con ayuda de IA",
+      "Aplicación de herramientas para el día a día con ayuda de IA",
 
     // About Me
-    "about.title": "Sobre Mi",
+    "about.title": "Sobre Mí",
     "about.des.1":
-      "Me llamo Ezequiel Benitez pero me suelen decir Eze Empecé en la programación previo a la cuarentena del 2020. Actualmente estoy ",
-    "about.des.2":
-      "diseñando y lanzando aplicaciones como desarrollador freelance.",
+      "Me llamo Ezequiel Benitez, pero me suelen llamar Eze. Comencé en la programación antes de la cuarentena de 2020. Actualmente,",
+    "about.des.2": "diseño y lanzo aplicaciones como desarrollador freelance.",
     "about.des.3": "Mi carrera profesional me ha llevado a ",
-    "about.des.4": "especializarme en el desarrollo de Backend y Mobile",
+    "about.des.4": "especializarme en desarrollo Backend y Mobile",
     "about.des.5":
       ", donde he perfeccionado mis habilidades en tecnologías como",
     "about.des.6": "Node.js, Nest.js, Spring Boot, Angular",
     "about.des.7":
-      ". Además, tengo experiencia en el desarrollo de aplicaciones móviles con",
+      ". Además, tengo experiencia en desarrollo de aplicaciones móviles con",
     "about.des.8":
       "React Native y en la creación de interfaces web dinámicas utilizando React.js",
     "about.des.9":
       ". Mi pasión por la tecnología y mi capacidad para adaptarme rápidamente a las nuevas tecnologías me permiten abordar desafíos complejos con confianza y eficacia.",
     "about.des.10": "Además de mi experiencia técnica, ",
     "about.des.11":
-      "soy un comunicador habilidoso y un colaborador eficaz en equipos multidisciplinarios.",
-    "about.des.12": "Disfruto trabajando en entornos dinámicos",
+      "soy un comunicador hábil y un colaborador eficaz en equipos multidisciplinarios.",
+    "about.des.12": "Disfruto trabajar en entornos dinámicos ",
     "about.des.13":
-      " donde puedo contribuir con mis habilidades para resolver problemas y mi creatividad para encontrar soluciones innovadoras.",
+      "donde puedo contribuir con mis habilidades para resolver problemas y mi creatividad para encontrar soluciones innovadoras.",
   },
 } as const;

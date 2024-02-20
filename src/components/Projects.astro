@@ -21,6 +21,7 @@ import CloudinaryIcon from "./icon/Cloudinary.astro";
 import MongoIcon from "./icon/Mongo.astro";
 import RedisIcon from "./icon/Redis.astro";
 import OpenIcon from "./icon/OpenAi.astro";
+import DockerIcon from "./icon/Docker.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -126,6 +127,11 @@ const TAGS = {
     class: "bg-black text-white",
     icon: OpenIcon,
   },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-black text-white",
+    icon: DockerIcon,
+  },
 };
 
 const PROJECTS = [
@@ -133,7 +139,6 @@ const PROJECTS = [
     title: "Evento X",
     description: t("project.des.1"),
     link: "https://eventox-client-dun.vercel.app/",
-    github: "https://github.com",
     image: "/projects/eventox.webp",
     tags: [
       TAGS.AWS,
@@ -153,7 +158,6 @@ const PROJECTS = [
     title: "Spootchat",
     description: t("project.des.2"),
     link: "https://spoot-chat-frontend.vercel.app/",
-    github: "https://github.com",
     image: "/projects/spootcht.webp",
     tags: [
       TAGS.SPRING,
@@ -164,6 +168,7 @@ const PROJECTS = [
       TAGS.REDUX,
       TAGS.POSTGRES,
       TAGS.EXPRESS,
+      TAGS.DOCKER,
     ],
     plataform: ["Mobile", "Web"],
   },
@@ -173,7 +178,14 @@ const PROJECTS = [
     link: "https://react-gpt-frontend-psi.vercel.app",
     github: "https://github.com",
     image: "/projects/toolai.webp",
-    tags: [TAGS.REACT, TAGS.VITE, TAGS.NEST, TAGS.OPENAI],
+    tags: [
+      TAGS.REACT,
+      TAGS.VITE,
+      TAGS.NEST,
+      TAGS.OPENAI,
+      TAGS.DOCKER,
+      TAGS.MONGO,
+    ],
     plataform: ["Mobile", "Web"],
   },
 ];
@@ -225,6 +237,7 @@ import CodeIcon from "./icon/Code.astro";
               {github && (
                 <a
                   role="link"
+                  target="_blank"
                   class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
                   href={github}
                 >
@@ -235,6 +248,7 @@ import CodeIcon from "./icon/Code.astro";
               {link && (
                 <a
                   role="link"
+                  target="_blank"
                   class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
                   href={link}
                 >
