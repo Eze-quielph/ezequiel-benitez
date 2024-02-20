@@ -12,30 +12,30 @@ const t = useTranslations(lang);
     class="flex px-3 text-sm font-medium rounded-full text-white justify-center items-center"
   >
     <a
-      href="/#experience"
+      href={"/" + lang + "/#experience"}
       class="relative block px-2 py-2 transition hover:text-sky-500 duration-300 ease-in-out transform hover:scale-110"
     >
       {t("header.experience")}
     </a>
     <a
-      href="/#project"
+      href={"/" + lang + "/#project"}
       class="relative block px-2 py-2 transition hover:text-sky-500 duration-300 ease-in-out transform hover:scale-110"
     >
       {t("header.project")}
     </a>
     <a
-      href="/#about"
+      href={"/" + lang + "/#about"}
       class="relative block px-2 py-2 transition hover:text-sky-500 duration-300 ease-in-out transform hover:scale-110"
     >
       {t("header.about")}
     </a>
     <a
-      href="/#contact"
+      href={"/" + lang + "/#contact"}
       class="relative block px-2 py-2 transition hover:text-sky-500 duration-300 ease-in-out transform hover:scale-110"
     >
       {t("header.contact")}
     </a>
-    <div class=" align-middle flex item-center justify-center mb-3 mr-2">
+    <div class="align-middle flex item-center justify-center mb-3 mr-2">
       <LangToggle class="h-6 w-6" />
     </div>
   </nav>
@@ -43,44 +43,44 @@ const t = useTranslations(lang);
 
 <script>
   document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section")
-    const navItems = document.querySelectorAll("header nav a")
+    const sections = document.querySelectorAll("section");
+    const navItems = document.querySelectorAll("header nav a");
 
     const callback = (entries: any[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           navItems.forEach((item) => {
             if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-yellow-500")
+              item.classList.add("text-yellow-500");
             } else {
-              item.classList.remove("text-yellow-500")
+              item.classList.remove("text-yellow-500");
             }
-          })
+          });
         }
-      })
-    }
+      });
+    };
 
     const observer = new IntersectionObserver(callback, {
       root: null,
       rootMargin: "0px",
       threshold: 0.3,
-    })
+    });
 
     sections.forEach((section) => {
-      observer.observe(section)
-    })
+      observer.observe(section);
+    });
 
     // Cleanup function
     document.onvisibilitychange = () => {
       if (document.visibilityState === "hidden") {
-        observer.disconnect()
+        observer.disconnect();
       } else {
         sections.forEach((section) => {
-          observer.observe(section)
-        })
+          observer.observe(section);
+        });
       }
-    }
-  })
+    };
+  });
 </script>
 
 <style>
