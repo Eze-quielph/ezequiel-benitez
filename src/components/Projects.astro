@@ -3,6 +3,24 @@ import HTML from "./icon/HTML.astro";
 import CSS from "./icon/CSS.astro";
 import Github from "./icon/Github.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import NextIcon from "./icon/Next.astro";
+import ViteIcon from "./icon/Vite.astro";
+import VitestIcon from "./icon/Vitest.astro";
+import ReactIcon from "./icon/React.astro";
+import ReactRouterIcon from "./icon/React-Router.astro";
+import ReduxIcon from "./icon/Redux.astro";
+import SassIcon from "./icon/Sass.astro";
+import TailwindIcon from "./icon/Tailwind.astro";
+import NestIcon from "./icon/Nest.astro";
+import SpringIcon from "./icon/Spring.astro";
+import FirebaseIcon from "./icon/Firebase.astro";
+import PostgresIcon from "./icon/Postgres.astro";
+import AwsIcon from "./icon/Aws.astro";
+import ExpressIcon from "./icon/Express.astro";
+import CloudinaryIcon from "./icon/Cloudinary.astro";
+import MongoIcon from "./icon/Mongo.astro";
+import RedisIcon from "./icon/Redis.astro";
+import OpenIcon from "./icon/OpenAi.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -18,6 +36,96 @@ const TAGS = {
     class: "bg-black text-white",
     icon: CSS,
   },
+  NEXT: {
+    name: "Next",
+    class: "bg-black text-white",
+    icon: NextIcon,
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-black text-white",
+    icon: ViteIcon,
+  },
+  VITEST: {
+    name: "Vitest",
+    class: "bg-black text-white",
+    icon: VitestIcon,
+  },
+  REACT: {
+    name: "React JS",
+    class: "bg-black text-white",
+    icon: ReactIcon,
+  },
+  REACTROUTER: {
+    name: "React Router",
+    class: "bg-black text-white",
+    icon: ReactRouterIcon,
+  },
+  REDUX: {
+    name: "Redux",
+    class: "bg-black text-white",
+    icon: ReduxIcon,
+  },
+  SASS: {
+    name: "Sass",
+    class: "bg-black text-white",
+    icon: SassIcon,
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-black text-white",
+    icon: TailwindIcon,
+  },
+  NEST: {
+    name: "Nest Js",
+    class: "bg-black text-white",
+    icon: NestIcon,
+  },
+  SPRING: {
+    name: "Spring Boot",
+    class: "bg-black text-white",
+    icon: SpringIcon,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-black text-white",
+    icon: FirebaseIcon,
+  },
+  POSTGRES: {
+    name: "Postgres",
+    class: "bg-black text-white",
+    icon: PostgresIcon,
+  },
+  AWS: {
+    name: "Amazon Web Service",
+    class: "bg-black text-white",
+    icon: AwsIcon,
+  },
+  EXPRESS: {
+    name: "Express Js",
+    class: "bg-black text-white",
+    icon: ExpressIcon,
+  },
+  CLOUDINARY: {
+    name: "Cloudinary",
+    class: "bg-black text-white",
+    icon: CloudinaryIcon,
+  },
+  MONGO: {
+    name: "MongoDb",
+    class: "bg-black text-white",
+    icon: MongoIcon,
+  },
+  REDIS: {
+    name: "Redis",
+    class: "bg-black text-white",
+    icon: RedisIcon,
+  },
+  OPENAI: {
+    name: "Open AI",
+    class: "bg-black text-white",
+    icon: OpenIcon,
+  },
 };
 
 const PROJECTS = [
@@ -27,7 +135,18 @@ const PROJECTS = [
     link: "https://eventox-client-dun.vercel.app/",
     github: "https://github.com",
     image: "/projects/eventox.webp",
-    tags: [TAGS.HTML, TAGS.CSS],
+    tags: [
+      TAGS.AWS,
+      TAGS.CLOUDINARY,
+      TAGS.NEST,
+      TAGS.NEXT,
+      TAGS.SPRING,
+      TAGS.FIREBASE,
+      TAGS.REACT,
+      TAGS.SASS,
+      TAGS.REDUX,
+      TAGS.POSTGRES,
+    ],
     plataform: ["Mobile", "Web"],
   },
   {
@@ -36,7 +155,16 @@ const PROJECTS = [
     link: "https://spoot-chat-frontend.vercel.app/",
     github: "https://github.com",
     image: "/projects/spootcht.webp",
-    tags: [TAGS.HTML, TAGS.CSS],
+    tags: [
+      TAGS.SPRING,
+      TAGS.CLOUDINARY,
+      TAGS.FIREBASE,
+      TAGS.REACT,
+      TAGS.TAILWIND,
+      TAGS.REDUX,
+      TAGS.POSTGRES,
+      TAGS.EXPRESS,
+    ],
     plataform: ["Mobile", "Web"],
   },
   {
@@ -45,7 +173,7 @@ const PROJECTS = [
     link: "https://react-gpt-frontend-psi.vercel.app",
     github: "https://github.com",
     image: "/projects/toolai.webp",
-    tags: [TAGS.HTML, TAGS.CSS],
+    tags: [TAGS.REACT, TAGS.VITE, TAGS.NEST, TAGS.OPENAI],
     plataform: ["Mobile", "Web"],
   },
 ];
@@ -53,7 +181,7 @@ const PROJECTS = [
 import CodeIcon from "./icon/Code.astro";
 ---
 
-<h2  id="project" class="text-3xl font-semibold pb-6 flex gap-x-3 items-center">
+<h2 id="project" class="text-3xl font-semibold pb-6 flex gap-x-3 items-center">
   <CodeIcon class="size-7" />
   {t("project.title.main")}
 </h2>
@@ -64,7 +192,7 @@ import CodeIcon from "./icon/Code.astro";
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              alt="QUE MIRA BOBO"
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
               src={image}
@@ -77,11 +205,11 @@ import CodeIcon from "./icon/Code.astro";
             {title}
           </h3>
           <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+            <ul class="flex flex-wrap mb-2 gap-x-2 gap-y-2">
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
                   >
                     <tag.icon class="size-4" />
                     {tag.name}
